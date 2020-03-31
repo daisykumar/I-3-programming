@@ -1,0 +1,52 @@
+body{
+  background-color: #eee;
+}
+
+.first, .second{
+  font-size: 400px;
+  text-align: center;
+  font-family: helvetica;
+}
+
+  .heart {
+    background-color: red;
+    display: inline-block;
+    height: 300px;
+    margin: 0 10px;
+    position: relative;
+    top: 50;
+    left: 2600;
+    transform: rotate(-45deg);
+    width: 300px;
+    animation: snurr 4s infinite alternate;
+  }
+
+
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 300px;
+    position: absolute;
+    width: 300px;
+  }
+  
+  .heart:before {
+    top: -150px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 150px;
+    top: 0;
+  }
+  @keyframes snurr {
+    from {
+        transform: rotate(0) scale(1);
+    }
+    to {
+        transform: rotate(360deg) scale(2);
+    }
+    
+}
